@@ -1,0 +1,23 @@
+#newtask button {
+    position: relative;
+    float: right;
+    width: 20%;
+    height: 45px;
+    border-radius: 5px;
+    font-family: "Arial", "Helvetica", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    background-color: #8052ec;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    transition: .2s;
+}
+#newtask button:hover {
+    outline: none;
+    transform: translateY(-5px);
+    box-shadow: 0px 7px 20px rgba(0,0,0.3);
+}
+#newtask button:focus {
+    outline: none;
+}
