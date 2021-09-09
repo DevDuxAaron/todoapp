@@ -1,9 +1,20 @@
 import React from "react";
-import "./styles/CreateTodoButton.css"
+import "./CreateTodoButton.css"
 
-function CreateTodoButton() {
+function CreateTodoButton(props) {
+    const onClickButton = () => {
+        if (!props.openModal) {
+            document.getElementById('push').classList.add('active');
+        } else {
+            document.getElementById('push').classList.remove('active');
+        }
+        props.setOpenModal(!props.openModal)
+    }
     return(
-        <button id="push">Add</button>
+        <button
+        id="push"
+        onClick={onClickButton}
+        >+</button>
     );
 }
 

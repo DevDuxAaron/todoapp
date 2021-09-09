@@ -21,20 +21,23 @@ body {
 ul {
   list-style: none;
 }
+#root {
+  width: 100vw;
+  height: 100vh;
+}
 .container {
-    width: 90%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    padding: 10px 20px;
-    top: 50%;
-    left: 50%;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 @media screen and (min-width: 768px){
   body {
     height: 100vh;
   }
   .container {
-    width: 50%;
-    padding: 20px 30px;
+    padding: 100px;
   }
 }
