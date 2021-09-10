@@ -1,6 +1,6 @@
 form {
     background-color: #fff;
-    padding: 30px 20px;
+    padding: 30px 30px;
     border-radius: 10px;
     box-shadow: 0 15px 30px rgba(0,0,0,0.3);
     /* width: 100%; */
@@ -14,6 +14,7 @@ form textarea {
     height: 60px;
     padding: 1rem;
     border: 1px solid #afafaf;
+    border-radius: 10px;
     margin-top: 1rem;
     font-size: 1rem;
     transition: .2s;
@@ -23,9 +24,35 @@ form textarea:focus {
     box-shadow: 0 0 9px 0 #8052ec;
     outline: none;
 }
-#cancelTodo {
+.btn_group {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn {
+    width: 45%;
+    height: 50px;
     border: none;
     outline: none;
+    font-size: 1rem;
     background: #fff;
     box-shadow: 1px 1px 6px #afafaf;
+    border-radius: 10px;
+    transition: .2s;
+}
+.btn:hover {
+    box-shadow: 1px 1px 9px #afafaf;
+}
+#addTodo {
+    color: #fff;
+    background-color: #8052ec;
+}
+.invalidForm {
+    color: red;
+    font-size: .8rem;
+}
+.invalidForm_text {
+    box-shadow: 0 0 9px 0 red;
 }

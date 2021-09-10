@@ -6,7 +6,9 @@ function TodoForm() {
     const [newTodoValue, setNewTodoValue] = React.useState('')
     const {
         addTodo,
-        setOpenModal
+        setOpenModal,
+        invalidForm,
+        setInvalidForm
     } = React.useContext(TodoContext)
 
     const onChange = (event) => {
@@ -18,20 +20,27 @@ function TodoForm() {
     }
     const onSubmit = (event) => {
         event.preventDefault()
-        addTodo(newTodoValue)
-        setOpenModal(false)
-        document.getElementById('push').classList.remove('active');
+        if (newTodoValue !== "") {
+            addTodo(newTodoValue)
+            setOpenModal(false)
+            document.getElementById('push').classList.remove('active');
+            setInvalidForm(false)
+        } else {
+            setInvalidForm(true)
+        }
     }
 
     return (
         <form onSubmit={onSubmit}>
-            <label>Introduce tu nueva tarea</label>
+            <label>Introduce tu nueva tarea</label><br />
+            {invalidForm && <label className="invalidForm">Por favor, ingresa un texto</label>}
             <textarea
+                className={invalidForm && "invalidForm_text"}
                 value={newTodoValue}
                 placeholder="Cortar la cebolla para el almuerzo"
                 onChange={onChange}
             />
-            <div>
+            <div className="btn_group">
                 <button
                     id="cancelTodo"
                     className="btn"
