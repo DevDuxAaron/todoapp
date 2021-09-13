@@ -35,7 +35,8 @@ function TodoForm() {
             <label>Introduce tu nueva tarea</label><br />
             {invalidForm && <label className="invalidForm">Por favor, ingresa un texto</label>}
             <textarea
-                className={invalidForm && "invalidForm_text"}
+                className= {(invalidForm && "invalidForm_text") ? "invalidForm_text" : ""}
+                // className={invalidForm && "invalidForm_text"} NO RECOMENDADO
                 value={newTodoValue}
                 placeholder="Cortar la cebolla para el almuerzo"
                 onChange={onChange}

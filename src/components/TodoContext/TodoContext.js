@@ -14,6 +14,7 @@ function TodoProvider(props) {
   const [searchValue, setSearchValue] = React.useState("");
   const [openModal, setOpenModal] = React.useState(false);
   const [invalidForm, setInvalidForm] = React.useState(false);
+  const idManager = 0
 
   const completedTodos = todos.filter((todo) => todo.completed).length;
   const totalTodos = todos.length;
@@ -29,11 +30,16 @@ function TodoProvider(props) {
     });
   }
 
+  const generateNewId = (text) => {
+    return idManager + text
+  }
+
   const addTodo = (text) => {
     const newTodos = [...todos];
     newTodos.push({
       completed: false,
-      text: text
+      text: text,
+      key: generateNewId(text)
     })
     saveTodos(newTodos);
   }

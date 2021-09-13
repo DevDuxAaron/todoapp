@@ -47,7 +47,7 @@ function AppUI() {
                     setOpenModal={setOpenModal}
                 />
                 </TodoList>
-                { !!openModal &&
+                { openModal &&
                     <Modal>
                         <TodoForm/>
                     </Modal>
