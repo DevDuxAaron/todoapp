@@ -1,0 +1,50 @@
+li {
+    display: flex;
+    justify-content: space-between;
+}
+.task {
+    height: 50px;
+    width: 70%;
+    margin-top: 15px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+.task + button.delete {
+    width: 20%;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+.animated-bg {
+    background-image: linear-gradient(
+        to right,
+        #f6f7f8 0%,
+        #edeef1 10%,
+        #f6f7f8 20%,
+        #f6f7f8 100%
+        );
+    background-size: 200% 100%;
+    animation: bgPos 1s linear infinite;
+}
+.animated-bg-text {
+    border-radius: 50px;
+    display: inline-block;
+    margin: 0;
+    height: 10px;
+    width: 100%;
+}
+
+@keyframes bgPos {
+    0% {
+        background-position: 50% 0;
+    }
+    100% {
+        background-position: -150% 0
+    }
+}

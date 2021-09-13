@@ -1,0 +1,13 @@
+.error_title {
+    color: #8f9192;
+    text-align: center;
+    font-size: 30px;
+}
+.error_title i {
+    margin-right: 5px;
+}
+.error_desc {
+    text-align: center;
+    color: #d1d3d4;
+    font-size: 20px;
+}

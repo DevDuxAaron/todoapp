@@ -1,0 +1,28 @@
+li {
+    display: flex;
+    justify-content: space-between;
+}
+.taskSample {
+    height: 50px;
+    width: 70%;
+    margin-top: 15px;
+    padding: 5px 10px;
+    text-align: left;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+.taskSample span {
+    color: #898b8b;
+}
+.taskSample + button.deleteSample {
+    width: 20%;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
